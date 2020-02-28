@@ -2,20 +2,32 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color:#c2e1ff;
+}
+
 #main-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items:center; 
     width:40%;
     margin: 5% auto;
+    background-color:white;
+    min-height:60vh;
 }
 
 #todo-title{
     width:100%;
     text-align:center;
     padding: 1%;
-    margin-bottom:1%;
-    border:1px solid black;     
+    margin-bottom:1%; 
+}
+
+#todo-title, .items-list, .marker{
+    color:white;
+    border:1px solid white;
+    background-color: #8fc8ff;  
 }
 
 #todo-list-container{
