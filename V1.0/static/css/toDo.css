@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items:center; 
-    width:40%;
+    width:40vw;
     margin:5% auto;
     background-color:#c2e1ff;
     min-height:60vh;
@@ -24,11 +24,6 @@ body{
     margin-bottom:0;
     color:white; 
     background-color: black;
-}
-
-.items-list, .todo-item, .marker{
-    color:black;
-    background-color: white;
 }
 
 #todo-list-container{
@@ -49,10 +44,13 @@ body{
 }
 .marker, .todo-item{
     border:1px solid black;
+    height:1.75em;
+    padding:1%;
+    color:black;
+    background-color: white;
 }
 .marker{
     width:10%;
-    padding:1.6%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -60,18 +58,28 @@ body{
 }
 .marker>svg{
     cursor:pointer;
+    width:auto;
 }
 .todo-item{
-    height:100%;
     width:90%;
-    padding:1%;
+}
+.todo-item>.remove{
+    color:grey;
+    visibility: hidden;
+}
+.todo-item:hover>.remove{
+    visibility: visible;
+    cursor:pointer;
 }
 .todo-item>input{
     border:none;
     width:95%;
+    height:1em;
+    outline:none;
 }
 #item-0>.todo-item{
     border:0px;
-    padding:0px;    
+    padding:0px;
+    background-color: inherit;    
 }
 

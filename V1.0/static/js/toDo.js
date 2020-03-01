@@ -44,7 +44,11 @@ function addToDoItem(elem) {
     item.setAttribute('class', 'todo-item');
     let input = document.createElement('input');
     input.setAttribute('type', 'text');
-    item.append(input)
+    let icon = document.createElement('i');
+    icon.setAttribute('class', 'fas fa-times remove');
+    icon.setAttribute('onclick', 'removeToDoItem()');
+    item.append(input);
+    item.append(icon);
     elem.append(item);
 }
 
@@ -60,4 +64,9 @@ function toggleMarker() {
         elem.classList.add("fa-square");
     }
 
+}
+
+function removeToDoItem() {
+    let listItem = event.target.closest(".list-item");
+    listItem.remove();
 }
